@@ -1,76 +1,25 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import type { Metadata } from "next";
+import Link from "next/link";
+import { Nav } from "../components/nav";
+import { FooterSimple } from "../components/footer";
 
-export const Route = createFileRoute("/impact")({
-  head: () => ({
-    meta: [
-      { title: "Impact — Pulsa Health" },
-      { name: "description", content: "Pulsa Health's mission to fix Africa's healthcare access crisis — the traction, the market, and the roadmap." },
-      { property: "og:title", content: "Impact — Pulsa Health" },
-      { property: "og:description", content: "Fixing healthcare access for 615 million Africans with AI triage." },
-      { property: "og:url", content: "/impact" },
-    ],
-    links: [{ rel: "canonical", href: "/impact" }],
-  }),
-  component: Impact,
-});
+export const metadata: Metadata = {
+  title: "Impact",
+  description:
+    "Pulsa Health's mission to fix Africa's healthcare access crisis — the traction, the market, and the roadmap.",
+  openGraph: {
+    title: "Impact — Pulsa Health",
+    description: "Fixing healthcare access for 615 million Africans with AI triage.",
+    url: "/impact",
+  },
+  alternates: { canonical: "/impact" },
+};
 
-function Nav() {
-  return (
-    <header className="sticky top-0 z-50 border-b border-border/40 bg-background/80 backdrop-blur-lg">
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
-        <Link to="/" className="flex items-center gap-2 font-display text-xl font-semibold tracking-tight">
-          <span className="grid h-8 w-8 place-items-center rounded-full bg-primary text-primary-foreground">
-            <svg viewBox="0 0 24 24" className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-              <path d="M3 12h3l2-6 4 12 2-6h7" />
-            </svg>
-          </span>
-          Pulsa<span className="text-primary">.</span>
-        </Link>
-        <nav className="hidden items-center gap-8 text-sm text-muted-foreground md:flex">
-          <Link to="/solution" className="hover:text-foreground">Solution</Link>
-          <Link to="/technology" className="hover:text-foreground">Technology</Link>
-          <Link to="/impact" className="text-foreground">Impact</Link>
-          <Link to="/about" className="hover:text-foreground">About</Link>
-        </nav>
-        <Link to="/contact" className="rounded-full bg-primary px-5 py-2 text-sm font-medium text-primary-foreground transition hover:opacity-90">
-          Request Demo
-        </Link>
-      </div>
-    </header>
-  );
-}
-
-function Footer() {
-  return (
-    <footer className="border-t border-border bg-card/30 py-12">
-      <div className="mx-auto max-w-7xl px-6">
-        <div className="flex flex-col items-start justify-between gap-4 md:flex-row md:items-center">
-          <Link to="/" className="flex items-center gap-2 font-display text-lg font-semibold">
-            <span className="grid h-7 w-7 place-items-center rounded-full bg-primary text-primary-foreground">
-              <svg viewBox="0 0 24 24" className="h-3.5 w-3.5" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M3 12h3l2-6 4 12 2-6h7" />
-              </svg>
-            </span>
-            Pulsa<span className="text-primary">.</span>
-          </Link>
-          <div className="flex flex-wrap gap-6 text-sm text-muted-foreground">
-            <Link to="/privacy" className="hover:text-primary">Privacy</Link>
-            <Link to="/terms" className="hover:text-primary">Terms</Link>
-            <Link to="/contact" className="hover:text-primary">Contact</Link>
-          </div>
-          <div className="text-xs text-muted-foreground">© {new Date().getFullYear()} Pulsa Health Ltd. Lagos, Nigeria.</div>
-        </div>
-      </div>
-    </footer>
-  );
-}
-
-function Impact() {
+export default function ImpactPage() {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <Nav />
       <main>
-        {/* Hero */}
         <section className="border-b border-border py-24" style={{ background: "var(--gradient-hero)" }}>
           <div className="mx-auto max-w-4xl px-6 text-center">
             <p className="mb-4 text-xs uppercase tracking-widest text-primary">Impact</p>
@@ -85,7 +34,6 @@ function Impact() {
           </div>
         </section>
 
-        {/* The problem in numbers */}
         <section className="py-24">
           <div className="mx-auto max-w-7xl px-6">
             <p className="mb-4 text-xs uppercase tracking-widest text-primary">The problem</p>
@@ -93,8 +41,9 @@ function Impact() {
               A healthcare crisis that costs lives and dollars every single day.
             </h2>
             <p className="mt-6 max-w-2xl text-lg text-muted-foreground">
-              Millions of health seekers don't know where to go, who to trust, or when it's urgent.
-              The result is avoidable deaths, wasted emergency capacity, and billions in misdirected spending.
+              Millions of health seekers don&apos;t know where to go, who to trust, or when it&apos;s
+              urgent. The result is avoidable deaths, wasted emergency capacity, and billions in
+              misdirected spending.
             </p>
             <div className="mt-16 grid gap-6 md:grid-cols-3">
               {[
@@ -111,18 +60,17 @@ function Impact() {
           </div>
         </section>
 
-        {/* Why now */}
         <section className="border-y border-border bg-card/30 py-24">
           <div className="mx-auto max-w-4xl px-6 text-center">
             <p className="mb-4 text-xs uppercase tracking-widest text-primary">Why now</p>
             <h2 className="font-display text-4xl font-medium leading-tight md:text-6xl">
-              Africa's digital health window is open — and it won't stay that way.
+              Africa&apos;s digital health window is open — and it won&apos;t stay that way.
             </h2>
             <p className="mt-8 text-lg text-muted-foreground">
               Smartphone penetration crossed 50% in our launch markets in 2024. Health insurance
               schemes are digitizing claims. Generative AI is finally fluent in our languages. The
-              gap between "I have a symptom" and "I see the right clinician" is now a software
-              problem — and the team that closes it first defines the category.
+              gap between &ldquo;I have a symptom&rdquo; and &ldquo;I see the right clinician&rdquo;
+              is now a software problem — and the team that closes it first defines the category.
             </p>
           </div>
           <div className="mx-auto mt-16 max-w-7xl px-6 grid gap-6 md:grid-cols-3">
@@ -139,7 +87,6 @@ function Impact() {
           </div>
         </section>
 
-        {/* Traction */}
         <section className="py-24">
           <div className="mx-auto max-w-7xl px-6">
             <p className="mb-4 text-xs uppercase tracking-widest text-primary">Traction</p>
@@ -159,19 +106,21 @@ function Impact() {
             </div>
             <blockquote className="mt-16 rounded-2xl border border-border bg-card/50 p-10">
               <p className="font-display text-2xl leading-snug">
-                "Pulsa caught a hypertensive crisis my mum dismissed as a headache. The clinician
-                was on the line in under three minutes. That alone justifies the entire product."
+                &ldquo;Pulsa caught a hypertensive crisis my mum dismissed as a headache. The
+                clinician was on the line in under three minutes. That alone justifies the entire
+                product.&rdquo;
               </p>
               <footer className="mt-6 text-sm text-muted-foreground">— Adaeze O., pilot user, Lagos</footer>
             </blockquote>
           </div>
         </section>
 
-        {/* Market */}
         <section className="border-y border-border bg-card/30 py-24">
           <div className="mx-auto max-w-7xl px-6">
             <p className="mb-4 text-xs uppercase tracking-widest text-primary">Market opportunity</p>
-            <h2 className="font-display text-4xl font-medium md:text-5xl">Where we're starting. Where we're going.</h2>
+            <h2 className="font-display text-4xl font-medium md:text-5xl">
+              Where we&apos;re starting. Where we&apos;re going.
+            </h2>
             <div className="mt-12 grid gap-6 md:grid-cols-3">
               {[
                 { t: "Target users", d: "Urban health seekers aged 18–55, parents managing dependents, and SMEs offering staff health benefits. Initial focus on Nigeria's 220M population." },
@@ -187,11 +136,10 @@ function Impact() {
           </div>
         </section>
 
-        {/* Roadmap */}
         <section className="py-24">
           <div className="mx-auto max-w-7xl px-6">
             <p className="mb-4 text-xs uppercase tracking-widest text-primary">Roadmap</p>
-            <h2 className="font-display text-4xl font-medium md:text-5xl">What's next.</h2>
+            <h2 className="font-display text-4xl font-medium md:text-5xl">What&apos;s next.</h2>
             <div className="mt-12 overflow-hidden rounded-2xl border border-border">
               {[
                 { p: "Phase 1", t: "Private beta", d: "Multilingual triage, 12 pilot clinics, NDPR compliance audit." },
@@ -211,21 +159,20 @@ function Impact() {
           </div>
         </section>
 
-        {/* CTA */}
         <section className="border-t border-border bg-card/30 py-20">
           <div className="mx-auto max-w-3xl px-6 text-center">
             <h2 className="font-display text-4xl font-medium md:text-5xl">Join the mission.</h2>
             <p className="mt-6 text-lg text-muted-foreground">
-              We're actively onboarding pilot clinics, HMO partners, and enterprise health benefit sponsors.
-              If you want to bring Pulsa to your city or organization, let's talk.
+              We&apos;re actively onboarding pilot clinics, HMO partners, and enterprise health
+              benefit sponsors. If you want to bring Pulsa to your city or organization, let&apos;s talk.
             </p>
-            <Link to="/contact" className="mt-8 inline-flex rounded-full bg-primary px-8 py-3.5 text-sm font-medium text-primary-foreground shadow-lg shadow-primary/30 transition hover:opacity-90">
+            <Link href="/contact" className="mt-8 inline-flex rounded-full bg-primary px-8 py-3.5 text-sm font-medium text-primary-foreground shadow-lg shadow-primary/30 transition hover:opacity-90">
               Request a demo →
             </Link>
           </div>
         </section>
       </main>
-      <Footer />
+      <FooterSimple />
     </div>
   );
 }
