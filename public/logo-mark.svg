@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <defs>
+    <radialGradient id="bg2" cx="50%" cy="50%" r="60%">
+      <stop offset="0%" stop-color="#223530"/>
+      <stop offset="100%" stop-color="#0f1c19"/>
+    </radialGradient>
+    <linearGradient id="badge2" x1="40" y1="40" x2="360" y2="360" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#e88c48"/>
+      <stop offset="100%" stop-color="#b86022"/>
+    </linearGradient>
+    <filter id="glow2" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="7" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="400" height="400" fill="url(#bg2)"/>
+
+  <!-- Ambient glow -->
+  <ellipse cx="200" cy="200" rx="155" ry="140" fill="#d97840" fill-opacity="0.05"/>
+
+  <!-- Badge fills most of the canvas -->
+  <rect x="30" y="30" width="340" height="340" rx="88" fill="url(#badge2)"/>
+  <rect x="38" y="38" width="324" height="324" rx="80" fill="none"
+        stroke="white" stroke-opacity="0.13" stroke-width="2.5"/>
+
+  <!-- ECG baseline guide -->
+  <line x1="48" y1="200" x2="352" y2="200"
+        stroke="white" stroke-opacity="0.08" stroke-width="2"/>
+
+  <!-- Glow at R-peak -->
+  <ellipse cx="178" cy="115" rx="40" ry="28" fill="white" fill-opacity="0.07"/>
+
+  <!--
+    ECG path scaled to fill the 340×340 badge
+    Baseline y=200, span x=48 to x=352 (304px)
+    Scale relative to 400×400 logo.svg badge (168px wide → 304px):
+    scale = 304/168 = 1.81
+    P-peak: 158→(172-158)*1.81=25 above → y=175
+    R-peak: 100→(172-100)*1.81=130 above → y=70
+    S-valley: 190→(190-172)*1.81=33 below → y=233
+    T-peak: 145→(172-145)*1.81=49 above → y=151
+    X scale: (304/168)=1.81, offset from x=48
+  -->
+  <path
+    d="M 48,200 L 77,200
+       C 82,200 88,175 98,175
+       C 108,175 113,200 118,200
+       L 132,200 L 139,210
+       L 178,70
+       L 205,233
+       C 212,215 219,200 226,200
+       L 249,200
+       C 256,200 267,151 281,151
+       C 295,151 304,200 312,200
+       L 352,200"
+    stroke="white" stroke-width="14"
+    stroke-linecap="round" stroke-linejoin="round"
+    fill="none"/>
+
+  <!-- Apex dot with glow -->
+  <circle cx="178" cy="70" r="14" fill="white" fill-opacity="0.15" filter="url(#glow2)"/>
+  <circle cx="178" cy="70" r="9" fill="white"/>
+</svg>

@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import { Nav } from "../components/nav";
+import { Nav, Logo } from "../components/nav";
 
 export default function ContactPage() {
   const [submitted, setSubmitted] = useState(false);
@@ -199,14 +199,7 @@ export default function ContactPage() {
       <footer className="border-t border-border bg-card/30 py-12">
         <div className="mx-auto max-w-7xl px-6">
           <div className="flex flex-col items-start justify-between gap-4 md:flex-row md:items-center">
-            <Link href="/" className="flex items-center gap-2 font-display text-lg font-semibold">
-              <span className="grid h-7 w-7 place-items-center rounded-full bg-primary text-primary-foreground">
-                <svg viewBox="0 0 24 24" className="h-3.5 w-3.5" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M3 12h3l2-6 4 12 2-6h7" />
-                </svg>
-              </span>
-              Pulsa<span className="text-primary">.</span>
-            </Link>
+            <Logo />
             <div className="flex flex-wrap gap-6 text-sm text-muted-foreground">
               <Link href="/privacy" className="hover:text-primary">Privacy</Link>
               <Link href="/terms" className="hover:text-primary">Terms</Link>

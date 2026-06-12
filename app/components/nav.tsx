@@ -12,24 +12,52 @@ const navLinks = [
 
 export function Logo() {
   return (
-    <Link
-      href="/"
-      className="flex items-center gap-2 font-display text-xl font-semibold tracking-tight"
-    >
-      <span className="grid h-8 w-8 place-items-center rounded-full bg-primary text-primary-foreground">
-        <svg
-          viewBox="0 0 24 24"
-          className="h-4 w-4"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2.5"
+    <Link href="/" className="flex items-center gap-3">
+      <svg viewBox="0 0 40 40" width="38" height="38" fill="none" aria-hidden>
+        <defs>
+          <linearGradient id="plg" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
+            <stop offset="0%" stopColor="var(--primary)" />
+            <stop offset="100%" stopColor="var(--primary)" stopOpacity="0.68" />
+          </linearGradient>
+        </defs>
+
+        {/* Badge */}
+        <rect x="0.5" y="0.5" width="39" height="39" rx="11" fill="url(#plg)" />
+        {/* Inner frame ring */}
+        <rect x="2" y="2" width="36" height="36" rx="9.5" stroke="white" strokeOpacity="0.14" strokeWidth="0.75" fill="none" />
+
+        {/* ECG baseline guide */}
+        <line x1="4" y1="20" x2="36" y2="20" stroke="white" strokeOpacity="0.09" strokeWidth="0.6" />
+
+        {/* Soft glow at R-peak apex */}
+        <ellipse cx="16.5" cy="6" rx="5" ry="3.5" fill="white" fillOpacity="0.08" />
+
+        {/* P wave → QRS complex → T wave */}
+        <path
+          d="M 4,20 L 7,20
+             C 7.4,20 7.9,17.2 8.9,17.2
+             C 9.9,17.2 10.3,20 10.7,20
+             L 12.8,20 L 13.5,21.7
+             L 16.5,5.5
+             L 19.2,23.5
+             C 19.6,21.3 20.2,20.2 20.7,20.2
+             L 22.3,20
+             C 22.7,20 23.8,14.6 25.5,14.6
+             C 27.2,14.6 28.1,20 28.7,20
+             L 36,20"
+          stroke="white"
+          strokeWidth="2.2"
           strokeLinecap="round"
           strokeLinejoin="round"
-        >
-          <path d="M3 12h3l2-6 4 12 2-6h7" />
-        </svg>
+        />
+
+        {/* Apex marker — the critical triage moment */}
+        <circle cx="16.5" cy="5.5" r="1.8" fill="white" />
+      </svg>
+
+      <span className="font-display text-xl font-semibold tracking-tight">
+        Pulsa<span className="text-primary">.</span>
       </span>
-      Pulsa<span className="text-primary">.</span>
     </Link>
   );
 }

@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="38%" r="65%" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#223530"/>
+      <stop offset="100%" stop-color="#0f1c19"/>
+    </radialGradient>
+    <linearGradient id="badge" x1="100" y1="72" x2="300" y2="272" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#e88c48"/>
+      <stop offset="100%" stop-color="#b86022"/>
+    </linearGradient>
+    <filter id="apex-glow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="400" height="400" fill="url(#bg)"/>
+
+  <!-- Faint ambient glow behind badge -->
+  <ellipse cx="200" cy="172" rx="130" ry="110" fill="#d97840" fill-opacity="0.055"/>
+
+  <!-- ── Badge: 200×200 centred at (200,172) ── -->
+  <rect x="100" y="72" width="200" height="200" rx="52" fill="url(#badge)"/>
+
+  <!-- Inner frame ring -->
+  <rect x="106.5" y="78.5" width="187" height="187" rx="46" fill="none"
+        stroke="white" stroke-opacity="0.14" stroke-width="1.5"/>
+
+  <!-- ECG baseline guide -->
+  <line x1="116" y1="172" x2="284" y2="172"
+        stroke="white" stroke-opacity="0.08" stroke-width="1.5"/>
+
+  <!-- Soft glow behind R-peak -->
+  <ellipse cx="182" cy="100" rx="26" ry="18" fill="white" fill-opacity="0.08"/>
+
+  <!--
+    ECG path — full P-wave → QRS complex → T-wave
+    Baseline y=172, spans x=116 to x=284 (168px wide)
+    Key y values: P-peak=158, R-peak=100, S-valley=188, T-peak=145
+  -->
+  <path
+    d="M 116,172 L 132,172
+       C 134,172 137,158 142,158
+       C 147,158 150,172 153,172
+       L 161,172 L 165,177
+       L 182,100
+       L 197,190
+       C 201,181 205,172 209,172
+       L 221,172
+       C 225,172 231,145 239,145
+       C 247,145 252,172 256,172
+       L 284,172"
+    stroke="white" stroke-width="8.5"
+    stroke-linecap="round" stroke-linejoin="round"
+    fill="none"/>
+
+  <!-- Apex marker with glow -->
+  <circle cx="182" cy="100" r="9" fill="white" fill-opacity="0.18" filter="url(#apex-glow)"/>
+  <circle cx="182" cy="100" r="5.5" fill="white"/>
+
+  <!-- ── Wordmark ── -->
+  <text x="200" y="313"
+        text-anchor="middle"
+        font-family="Georgia, 'Times New Roman', serif"
+        font-size="62" font-weight="700"
+        letter-spacing="-2.5"
+        fill="#f0ece8">PULSA</text>
+
+  <!-- Sub-label -->
+  <text x="200" y="344"
+        text-anchor="middle"
+        font-family="Arial, Helvetica, sans-serif"
+        font-size="12.5" font-weight="400"
+        letter-spacing="9"
+        fill="#d97840">HEALTH</text>
+
+  <!-- Tagline rule lines flanking HEALTH -->
+  <line x1="108" y1="332" x2="154" y2="332" stroke="#d97840" stroke-opacity="0.45" stroke-width="0.8"/>
+  <line x1="246" y1="332" x2="292" y2="332" stroke="#d97840" stroke-opacity="0.45" stroke-width="0.8"/>
+</svg>
