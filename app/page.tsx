@@ -518,7 +518,7 @@ function Team() {
     {
       n: "Tunde Bakare",
       r: "Co-founder & CTO",
-      b: "Ex-Paystack, Andela. Built ML platforms at scale.",
+      b: "Built ML platforms at scale.",
       img: ctoPhoto,
       initials: "TB",
       social: {},
