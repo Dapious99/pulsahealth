@@ -6,6 +6,8 @@ import { Footer } from "./components/footer";
 import dashboard from "@/assets/dashboard.png";
 import mobile from "@/assets/mobile.png";
 import pulse from "@/assets/pulse.png";
+import ceoPhoto from "@/assets/ceo.jpg";
+import ctoPhoto from "@/assets/cto.jpg";
 
 export const metadata: Metadata = {
   title: "Pulsa Health — AI triage that gets you to the right care, faster",
@@ -504,7 +506,7 @@ function Team() {
       n: "Agu Kelechi",
       r: "Co-founder & CEO",
       b: "Entrepreneur and health-tech innovator building Africa's AI triage layer.",
-      img: "/ceo.jpg",
+      img: ceoPhoto,
       initials: "AK",
       social: {
         linkedin:
@@ -517,7 +519,7 @@ function Team() {
       n: "Tunde Bakare",
       r: "Co-founder & CTO",
       b: "Ex-Paystack, Andela. Built ML platforms at scale.",
-      img: "/cto.jpg",
+      img: ctoPhoto,
       initials: "TB",
       social: {},
     },

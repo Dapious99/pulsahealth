@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import ceoPhoto from "@/assets/ceo.jpg";
+import ctoPhoto from "@/assets/cto.jpg";
 import { Nav } from "../components/nav";
 import { FooterSimple } from "../components/footer";
 
@@ -21,7 +23,7 @@ const team = [
     n: "Agu Kelechi",
     r: "Co-founder & CEO",
     b: "Entrepreneur and health-tech innovator focused on closing the healthcare access gap across Sub-Saharan Africa through AI-driven solutions. Founded Pulsa Health to ensure no patient loses time — or life — to a broken triage system.",
-    img: "/ceo.jpg",
+    img: ceoPhoto,
     initials: "AK",
     social: {
       linkedin:
@@ -34,7 +36,7 @@ const team = [
     n: "Tunde Bakare",
     r: "Co-founder & CTO",
     b: "Built distributed systems serving millions of transactions daily. Led the technical team that scaled several AI and financial platforms.",
-    img: "/cto.jpg",
+    img: ctoPhoto,
     initials: "TB",
     social: {},
   },
