@@ -13,8 +13,7 @@ export const metadata: Metadata = {
     "AI symptom triage that routes patients to verified nurses and clinicians in minutes. Built for Africa, scaling globally.",
   openGraph: {
     title: "Pulsa Health — AI triage for faster, safer care",
-    description:
-      "AI symptom triage that routes patients to verified clinicians in minutes.",
+    description: "AI symptom triage that routes patients to verified clinicians in minutes.",
     url: "/",
   },
   alternates: { canonical: "/" },
@@ -22,17 +21,9 @@ export const metadata: Metadata = {
 
 function Hero() {
   return (
-    <section
-      className="relative overflow-hidden"
-      style={{ background: "var(--gradient-hero)" }}
-    >
+    <section className="relative overflow-hidden" style={{ background: "var(--gradient-hero)" }}>
       <div className="pointer-events-none absolute inset-0 opacity-30">
-        <Image
-          src={pulse}
-          alt=""
-          aria-hidden
-          className="absolute -right-20 top-20 w-[700px]"
-        />
+        <Image src={pulse} alt="" aria-hidden className="absolute -right-20 top-20 w-[700px]" />
       </div>
       <div className="relative mx-auto max-w-7xl px-6 py-24 md:py-32">
         <div className="grid items-center gap-16 lg:grid-cols-[1.1fr_1fr]">
@@ -42,14 +33,13 @@ function Hero() {
               Beta access opening Q1 — Lagos &amp; Abuja
             </div>
             <h1 className="font-display text-5xl font-medium leading-[1.05] md:text-7xl">
-              AI triage that gets you to the{" "}
-              <em className="not-italic text-primary">right care</em>, faster.
+              AI triage that gets you to the <em className="not-italic text-primary">right care</em>
+              , faster.
             </h1>
             <p className="mt-6 max-w-xl text-lg text-muted-foreground md:text-xl">
-              Pulsa Health is an AI-powered triage layer that listens to your
-              symptoms, flags risk in seconds, and routes you to a verified nurse
-              or clinician — without the queue, the guesswork, or the cost of a
-              wasted visit.
+              Pulsa Health is an AI-powered triage layer that listens to your symptoms, flags risk
+              in seconds, and routes you to a verified nurse or clinician — without the queue, the
+              guesswork, or the cost of a wasted visit.
             </p>
             <div className="mt-10 flex flex-wrap items-center gap-4">
               <Link
@@ -104,9 +94,7 @@ function Problem() {
   return (
     <section id="problem" className="border-y border-border bg-card/30 py-24">
       <div className="mx-auto max-w-7xl px-6">
-        <p className="mb-4 text-xs uppercase tracking-widest text-primary">
-          The problem
-        </p>
+        <p className="mb-4 text-xs uppercase tracking-widest text-primary">The problem</p>
         <h2 className="max-w-3xl font-display text-4xl font-medium leading-tight md:text-5xl">
           Millions of health seekers don&apos;t know{" "}
           <em className="not-italic text-primary">where to go</em>,{" "}
@@ -114,19 +102,14 @@ function Problem() {
           <em className="not-italic text-primary">when it&apos;s urgent</em>.
         </h2>
         <p className="mt-6 max-w-2xl text-lg text-muted-foreground">
-          The first 30 minutes of a symptom decide the cost, the outcome, and
-          sometimes the life. Today that window is wasted on Google searches,
-          WhatsApp voice notes, and crowded waiting rooms.
+          The first 30 minutes of a symptom decide the cost, the outcome, and sometimes the life.
+          Today that window is wasted on Google searches, WhatsApp voice notes, and crowded waiting
+          rooms.
         </p>
         <div className="mt-16 grid gap-6 md:grid-cols-3">
           {stats.map((s) => (
-            <div
-              key={s.l}
-              className="rounded-2xl border border-border bg-background p-8"
-            >
-              <div className="font-display text-5xl font-medium text-primary">
-                {s.n}
-              </div>
+            <div key={s.l} className="rounded-2xl border border-border bg-background p-8">
+              <div className="font-display text-5xl font-medium text-primary">{s.n}</div>
               <p className="mt-3 text-sm text-muted-foreground">{s.l}</p>
             </div>
           ))}
@@ -149,17 +132,14 @@ function SolutionSection() {
           className="w-full max-w-md justify-self-center rounded-2xl"
         />
         <div>
-          <p className="mb-4 text-xs uppercase tracking-widest text-primary">
-            The solution
-          </p>
+          <p className="mb-4 text-xs uppercase tracking-widest text-primary">The solution</p>
           <h2 className="font-display text-4xl font-medium leading-tight md:text-5xl">
             One conversation. The right clinician. Under five minutes.
           </h2>
           <p className="mt-6 text-lg text-muted-foreground">
-            Pulsa&apos;s AI assistant asks the questions a triage nurse would,
-            weighs your answers against millions of clinical patterns, then
-            routes you to a verified human practitioner with the specialty,
-            language, and availability that fits.
+            Pulsa&apos;s AI assistant asks the questions a triage nurse would, weighs your answers
+            against millions of clinical patterns, then routes you to a verified human practitioner
+            with the specialty, language, and availability that fits.
           </p>
           <ul className="mt-8 space-y-4">
             {[
@@ -205,18 +185,15 @@ function AI() {
     <section id="ai" className="border-y border-border bg-card/30 py-24">
       <div className="mx-auto max-w-7xl px-6">
         <div className="max-w-3xl">
-          <p className="mb-4 text-xs uppercase tracking-widest text-primary">
-            AI technology
-          </p>
+          <p className="mb-4 text-xs uppercase tracking-widest text-primary">AI technology</p>
           <h2 className="font-display text-4xl font-medium leading-tight md:text-5xl">
             AI isn&apos;t a feature here. It&apos;s the entire{" "}
             <em className="not-italic text-primary">care pathway</em>.
           </h2>
           <p className="mt-6 text-lg text-muted-foreground">
-            Four models work in concert — symptom understanding, risk
-            stratification, clinician matching, and outcome learning — to deliver
-            triage decisions that a board-certified doctor reviews before any
-            user-facing action.
+            Four models work in concert — symptom understanding, risk stratification, clinician
+            matching, and outcome learning — to deliver triage decisions that a board-certified
+            doctor reviews before any user-facing action.
           </p>
         </div>
         <div className="mt-16 grid gap-6 md:grid-cols-2">
@@ -225,9 +202,7 @@ function AI() {
               key={c.t}
               className="group rounded-2xl border border-border bg-background p-8 transition hover:border-primary/50"
             >
-              <div className="mb-4 font-display text-sm text-primary">
-                0{i + 1}
-              </div>
+              <div className="mb-4 font-display text-sm text-primary">0{i + 1}</div>
               <h3 className="font-display text-2xl font-medium">{c.t}</h3>
               <p className="mt-3 text-muted-foreground">{c.d}</p>
             </div>
@@ -265,9 +240,7 @@ function Features() {
   return (
     <section className="py-24">
       <div className="mx-auto max-w-7xl px-6">
-        <p className="mb-4 text-xs uppercase tracking-widest text-primary">
-          Product
-        </p>
+        <p className="mb-4 text-xs uppercase tracking-widest text-primary">Product</p>
         <h2 className="max-w-2xl font-display text-4xl font-medium md:text-5xl">
           What you get on day one.
         </h2>
@@ -310,18 +283,12 @@ function HowItWorks() {
   return (
     <section id="how" className="border-y border-border bg-card/30 py-24">
       <div className="mx-auto max-w-7xl px-6">
-        <p className="mb-4 text-xs uppercase tracking-widest text-primary">
-          How it works
-        </p>
-        <h2 className="font-display text-4xl font-medium md:text-5xl">
-          Four steps. Five minutes.
-        </h2>
+        <p className="mb-4 text-xs uppercase tracking-widest text-primary">How it works</p>
+        <h2 className="font-display text-4xl font-medium md:text-5xl">Four steps. Five minutes.</h2>
         <div className="mt-16 grid gap-8 md:grid-cols-4">
           {steps.map((s) => (
             <div key={s.n}>
-              <div className="font-display text-5xl font-medium text-primary">
-                {s.n}
-              </div>
+              <div className="font-display text-5xl font-medium text-primary">{s.n}</div>
               <h3 className="mt-4 font-display text-xl font-medium">{s.t}</h3>
               <p className="mt-2 text-sm text-muted-foreground">{s.d}</p>
             </div>
@@ -351,11 +318,10 @@ function Tech() {
               Secure, scalable healthcare backbone
             </h3>
             <p className="mt-4 text-muted-foreground">
-              Backend APIs run on AWS Fargate behind CloudFront. Patient records
-              live in encrypted RDS Postgres with field-level KMS. Amazon Bedrock
-              powers LLM inference; S3 stores de-identified training data;
-              CloudWatch and GuardDuty handle observability and intrusion
-              detection.
+              Backend APIs run on AWS Fargate behind CloudFront. Patient records live in encrypted
+              RDS Postgres with field-level KMS. Amazon Bedrock powers LLM inference; S3 stores
+              de-identified training data; CloudWatch and GuardDuty handle observability and
+              intrusion detection.
             </p>
             <ul className="mt-6 space-y-1 text-sm text-muted-foreground">
               <li>• Bedrock — managed LLM inference</li>
@@ -369,14 +335,11 @@ function Tech() {
             <div className="mb-6 font-display text-sm uppercase tracking-widest text-primary">
               AI acceleration — NVIDIA
             </div>
-            <h3 className="font-display text-2xl font-medium">
-              Real-time inference at the edge
-            </h3>
+            <h3 className="font-display text-2xl font-medium">Real-time inference at the edge</h3>
             <p className="mt-4 text-muted-foreground">
-              Triage decisions need to feel instant. We use NVIDIA Triton
-              Inference Server on GPU instances for low-latency symptom-model
-              serving, TensorRT for compressed on-device inference, and the MONAI
-              framework for imaging features on our roadmap.
+              Triage decisions need to feel instant. We use NVIDIA Triton Inference Server on GPU
+              instances for low-latency symptom-model serving, TensorRT for compressed on-device
+              inference, and the MONAI framework for imaging features on our roadmap.
             </p>
             <ul className="mt-6 space-y-1 text-sm text-muted-foreground">
               <li>• Triton — multi-model GPU serving</li>
@@ -396,20 +359,15 @@ function WhyNow() {
   return (
     <section className="border-y border-border bg-card/30 py-24">
       <div className="mx-auto max-w-4xl px-6 text-center">
-        <p className="mb-4 text-xs uppercase tracking-widest text-primary">
-          Why now
-        </p>
+        <p className="mb-4 text-xs uppercase tracking-widest text-primary">Why now</p>
         <h2 className="font-display text-4xl font-medium leading-tight md:text-6xl">
-          Africa&apos;s digital health window is open — and it won&apos;t stay
-          that way.
+          Africa&apos;s digital health window is open — and it won&apos;t stay that way.
         </h2>
         <p className="mt-8 text-lg text-muted-foreground">
-          Smartphone penetration crossed 50% in our launch markets in 2024.
-          Health insurance schemes are digitizing claims. Generative AI is
-          finally fluent in our languages. The gap between &ldquo;I have a
-          symptom&rdquo; and &ldquo;I see the right clinician&rdquo; is now a
-          software problem — and the team that closes it first defines the
-          category.
+          Smartphone penetration crossed 50% in our launch markets in 2024. Health insurance schemes
+          are digitizing claims. Generative AI is finally fluent in our languages. The gap between
+          &ldquo;I have a symptom&rdquo; and &ldquo;I see the right clinician&rdquo; is now a
+          software problem — and the team that closes it first defines the category.
         </p>
       </div>
     </section>
@@ -420,9 +378,7 @@ function Market() {
   return (
     <section className="py-24">
       <div className="mx-auto max-w-7xl px-6">
-        <p className="mb-4 text-xs uppercase tracking-widest text-primary">
-          Market
-        </p>
+        <p className="mb-4 text-xs uppercase tracking-widest text-primary">Market</p>
         <h2 className="font-display text-4xl font-medium md:text-5xl">
           Where we&apos;re starting.
         </h2>
@@ -441,10 +397,7 @@ function Market() {
               d: "Freemium consumer triage. Per-consultation revenue share with clinicians. Employer and insurer subscriptions.",
             },
           ].map((m) => (
-            <div
-              key={m.t}
-              className="rounded-2xl border border-border bg-card p-8"
-            >
+            <div key={m.t} className="rounded-2xl border border-border bg-card p-8">
               <h3 className="font-display text-xl font-medium">{m.t}</h3>
               <p className="mt-3 text-muted-foreground">{m.d}</p>
             </div>
@@ -459,12 +412,8 @@ function Traction() {
   return (
     <section className="border-y border-border bg-card/30 py-24">
       <div className="mx-auto max-w-7xl px-6">
-        <p className="mb-4 text-xs uppercase tracking-widest text-primary">
-          Traction
-        </p>
-        <h2 className="font-display text-4xl font-medium md:text-5xl">
-          Early signal.
-        </h2>
+        <p className="mb-4 text-xs uppercase tracking-widest text-primary">Traction</p>
+        <h2 className="font-display text-4xl font-medium md:text-5xl">Early signal.</h2>
         <div className="mt-12 grid gap-6 md:grid-cols-4">
           {[
             { n: "1,400+", l: "Waitlist signups in 6 weeks" },
@@ -472,22 +421,16 @@ function Traction() {
             { n: "3", l: "Letters of intent from HMOs" },
             { n: "MVP", l: "Live in private beta" },
           ].map((t) => (
-            <div
-              key={t.l}
-              className="rounded-2xl border border-border bg-background p-8"
-            >
-              <div className="font-display text-4xl font-medium text-primary">
-                {t.n}
-              </div>
+            <div key={t.l} className="rounded-2xl border border-border bg-background p-8">
+              <div className="font-display text-4xl font-medium text-primary">{t.n}</div>
               <p className="mt-2 text-sm text-muted-foreground">{t.l}</p>
             </div>
           ))}
         </div>
         <blockquote className="mt-16 rounded-2xl border border-border bg-background p-10">
           <p className="font-display text-2xl leading-snug">
-            &ldquo;Pulsa caught a hypertensive crisis my mum dismissed as a
-            headache. The clinician was on the line in under three minutes. That
-            alone justifies the entire product.&rdquo;
+            &ldquo;Pulsa caught a hypertensive crisis my mum dismissed as a headache. The clinician
+            was on the line in under three minutes. That alone justifies the entire product.&rdquo;
           </p>
           <footer className="mt-6 text-sm text-muted-foreground">
             — Adaeze O., pilot user, Lagos
@@ -534,12 +477,8 @@ function Roadmap() {
   return (
     <section className="py-24">
       <div className="mx-auto max-w-7xl px-6">
-        <p className="mb-4 text-xs uppercase tracking-widest text-primary">
-          Roadmap
-        </p>
-        <h2 className="font-display text-4xl font-medium md:text-5xl">
-          What&apos;s next.
-        </h2>
+        <p className="mb-4 text-xs uppercase tracking-widest text-primary">Roadmap</p>
+        <h2 className="font-display text-4xl font-medium md:text-5xl">What&apos;s next.</h2>
         <div className="mt-12 overflow-hidden rounded-2xl border border-border">
           {phases.map((p, i) => (
             <div
@@ -562,53 +501,105 @@ function Roadmap() {
 function Team() {
   const team = [
     {
-      n: "Dr. Amara Okeke",
+      n: "Agu Kelechi",
       r: "Co-founder & CEO",
-      b: "Former lead physician, Reddington Hospital. MBBS, Lagos.",
-      i: "AO",
+      b: "Entrepreneur and health-tech innovator building Africa's AI triage layer.",
+      img: "/ceo.jpg",
+      initials: "AK",
+      social: {
+        linkedin:
+          "https://www.linkedin.com/in/kelechi-agu-068365300?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+        twitter: "https://x.com/Moon_Whale1",
+        facebook: "https://www.facebook.com/agu.kelechi.399",
+      },
     },
     {
       n: "Tunde Bakare",
       r: "Co-founder & CTO",
       b: "Ex-Paystack, Andela. Built ML platforms at scale.",
-      i: "TB",
-    },
-    {
-      n: "Dr. Ifeoma Eze",
-      r: "Chief Medical Officer",
-      b: "10 years in WHO digital-health policy. PhD, LSHTM.",
-      i: "IE",
-    },
-    {
-      n: "Samuel Adeyemi",
-      r: "Head of AI",
-      b: "Former Google Health. NLP for low-resource languages.",
-      i: "SA",
+      img: "/cto.jpg",
+      initials: "TB",
+      social: {},
     },
   ];
   return (
     <section id="team" className="border-y border-border bg-card/30 py-24">
       <div className="mx-auto max-w-7xl px-6">
-        <p className="mb-4 text-xs uppercase tracking-widest text-primary">
-          Team
-        </p>
-        <h2 className="max-w-2xl font-display text-4xl font-medium md:text-5xl">
-          Clinicians and engineers, building together.
-        </h2>
-        <div className="mt-12 grid gap-6 md:grid-cols-4">
+        <div className="text-center">
+          <p className="mb-4 text-xs uppercase tracking-widest text-primary">Team</p>
+          <h2 className="font-display text-4xl font-medium md:text-5xl">
+            Clinicians and engineers, building together.
+          </h2>
+        </div>
+        <div className="mx-auto mt-12 grid max-w-2xl gap-6 md:grid-cols-2">
           {team.map((m) => (
             <div
               key={m.n}
-              className="rounded-2xl border border-border bg-background p-6"
+              className="flex flex-col items-center rounded-2xl border border-border bg-background p-8 text-center"
             >
-              <div className="mb-4 grid h-16 w-16 place-items-center rounded-full bg-primary/20 font-display text-xl text-primary">
-                {m.i}
+              <div className="mb-5 h-28 w-28 overflow-hidden rounded-full border-4 border-primary/20 bg-primary/10 shadow-lg">
+                {m.img ? (
+                  <Image
+                    src={m.img}
+                    alt={m.n}
+                    width={112}
+                    height={112}
+                    className="h-full w-full object-cover"
+                  />
+                ) : (
+                  <span className="flex h-full w-full items-center justify-center font-display text-2xl font-medium text-primary">
+                    {m.initials}
+                  </span>
+                )}
               </div>
-              <h3 className="font-display text-lg font-medium">{m.n}</h3>
-              <div className="text-xs uppercase tracking-widest text-primary">
-                {m.r}
-              </div>
+              <h3 className="font-display text-xl font-medium">{m.n}</h3>
+              <div className="mt-1 text-xs uppercase tracking-widest text-primary">{m.r}</div>
               <p className="mt-3 text-sm text-muted-foreground">{m.b}</p>
+              {Object.keys(m.social).length > 0 && (
+                <div className="mt-5 flex justify-center gap-3">
+                  {m.social.linkedin && (
+                    <a
+                      href={m.social.linkedin}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="grid h-8 w-8 place-items-center rounded-full border border-border bg-card text-muted-foreground transition hover:border-primary hover:text-primary"
+                      aria-label="LinkedIn"
+                    >
+                      <svg viewBox="0 0 24 24" className="h-3.5 w-3.5" fill="currentColor">
+                        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                        <rect x="2" y="9" width="4" height="12" />
+                        <circle cx="4" cy="4" r="2" />
+                      </svg>
+                    </a>
+                  )}
+                  {m.social.twitter && (
+                    <a
+                      href={m.social.twitter}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="grid h-8 w-8 place-items-center rounded-full border border-border bg-card text-muted-foreground transition hover:border-primary hover:text-primary"
+                      aria-label="X / Twitter"
+                    >
+                      <svg viewBox="0 0 24 24" className="h-3.5 w-3.5" fill="currentColor">
+                        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                      </svg>
+                    </a>
+                  )}
+                  {m.social.facebook && (
+                    <a
+                      href={m.social.facebook}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="grid h-8 w-8 place-items-center rounded-full border border-border bg-card text-muted-foreground transition hover:border-primary hover:text-primary"
+                      aria-label="Facebook"
+                    >
+                      <svg viewBox="0 0 24 24" className="h-3.5 w-3.5" fill="currentColor">
+                        <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+                      </svg>
+                    </a>
+                  )}
+                </div>
+              )}
             </div>
           ))}
         </div>
@@ -621,15 +612,13 @@ function CtaBanner() {
   return (
     <section className="py-24">
       <div className="mx-auto max-w-3xl px-6 text-center">
-        <p className="mb-4 text-xs uppercase tracking-widest text-primary">
-          Get started
-        </p>
+        <p className="mb-4 text-xs uppercase tracking-widest text-primary">Get started</p>
         <h2 className="font-display text-4xl font-medium leading-tight md:text-6xl">
           Ready to see Pulsa in action?
         </h2>
         <p className="mt-6 text-lg text-muted-foreground">
-          Book a 30-minute demo with a founder. We&apos;ll walk through a live
-          triage session tailored to your use case — clinic, HMO, or enterprise.
+          Book a 30-minute demo with a founder. We&apos;ll walk through a live triage session
+          tailored to your use case — clinic, HMO, or enterprise.
         </p>
         <div className="mt-10 flex flex-wrap justify-center gap-4">
           <Link

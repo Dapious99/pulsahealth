@@ -80,7 +80,7 @@ export function Footer() {
         <div className="mt-16 flex flex-col items-start justify-between gap-3 border-t border-border pt-8 text-xs text-muted-foreground md:flex-row md:items-center">
           <div>
             © {new Date().getFullYear()} Pulsa Health Ltd. Registered in
-            Lagos, Nigeria.
+            Enugu, Nigeria.
           </div>
           <div>
             Pulsa Health does not replace professional medical advice. In
@@ -110,7 +110,7 @@ export function FooterSimple() {
             </Link>
           </div>
           <div className="text-xs text-muted-foreground">
-            © {new Date().getFullYear()} Pulsa Health Ltd. Lagos, Nigeria.
+            © {new Date().getFullYear()} Pulsa Health Ltd. Enugu, Nigeria.
           </div>
         </div>
       </div>

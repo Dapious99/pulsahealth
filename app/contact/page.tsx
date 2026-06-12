@@ -184,7 +184,8 @@ export default function ContactPage() {
 
                 <div className="rounded-2xl border border-border bg-card p-8 text-sm text-muted-foreground">
                   <strong className="block font-medium text-foreground">Pulsa Health Ltd</strong>
-                  <span className="mt-1 block">Yaba, Lagos, Nigeria</span>
+                  <span className="mt-1 block">24 Amechi Street, Enugu, Nigeria</span>
+                  <a href="tel:+2348148949929" className="mt-2 block hover:text-primary">+234 814 894 9929</a>
                   <span className="mt-3 block text-xs">
                     Pulsa Health does not replace professional medical advice. In emergencies, call your local emergency number.
                   </span>
@@ -210,7 +211,7 @@ export default function ContactPage() {
               <Link href="/privacy" className="hover:text-primary">Privacy</Link>
               <Link href="/terms" className="hover:text-primary">Terms</Link>
             </div>
-            <div className="text-xs text-muted-foreground">© {new Date().getFullYear()} Pulsa Health Ltd. Lagos, Nigeria.</div>
+            <div className="text-xs text-muted-foreground">© {new Date().getFullYear()} Pulsa Health Ltd. Enugu, Nigeria.</div>
           </div>
         </div>
       </footer>

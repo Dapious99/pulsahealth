@@ -49,7 +49,7 @@ export default function PrivacyPage() {
           </p>
           <h2 className="font-display text-2xl text-foreground">Contact</h2>
           <p>
-            Data Protection Officer — privacy@pulsahealth.co · Pulsa Health Ltd, Lagos, Nigeria.
+            Data Protection Officer — privacy@pulsahealth.co · Pulsa Health Ltd, Enugu, Nigeria.
           </p>
         </div>
       </div>

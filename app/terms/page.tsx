@@ -48,7 +48,7 @@ export default function TermsPage() {
             <a href="mailto:legal@pulsahealth.co" className="text-primary">
               legal@pulsahealth.co
             </a>{" "}
-            · Pulsa Health Ltd, Lagos, Nigeria.
+            · Pulsa Health Ltd, Enugu, Nigeria.
           </p>
         </div>
       </div>
